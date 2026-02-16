@@ -580,23 +580,3 @@
   }
 
 })();
-**Implementierte Features:**
-
-✅ **Bürger-Menü** mit korrekter Höhe `calc(100vh - var(--header-h))`  
-✅ **Scroll-Spy** für aktive Menüpunkte  
-✅ **Smooth Scroll** zu Sektionen  
-✅ **Formvalidierung** mit RegExp und Fehleranzeige  
-✅ **Email-Validierung**: `/^[^\s@]+@[^\s@]+\.[^\s@]+$/`  
-✅ **Telefon-Validierung**: `/^[\+\(\)\d\s\-]{10,20}$/`  
-✅ **Escape-Zeichen** korrekt für Java  
-✅ **Count-Up** Animation für Statistiken  
-✅ **Scroll-to-Top** Button  
-✅ **Accordion** Funktionalität  
-✅ **Modal** für Privacy Policy  
-✅ **Native Lazy Loading** für Bilder/Videos  
-✅ **Redirect** zu `thank_you.html` nach Formular-Erfolg  
-✅ **Toast-Benachrichtigungen**  
-✅ **Button-Blockierung** während Formular-Übermittlung  
-✅ **Keine Reveal-Animationen** (AOS entfernt)  
-✅ **Keine inline-Styles** für Animationen  
-✅ **SOLID Prinzipien** befolgt

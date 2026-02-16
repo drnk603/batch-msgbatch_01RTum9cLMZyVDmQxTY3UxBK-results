@@ -1,4 +1,70 @@
 <!DOCTYPE html><html lang="de"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://domain.com/#org",
+      "name": "domain",
+      "url": "https://domain.com",
+      "email": "hello@domain.com",
+      "telephone": "+49 69 2266756",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sony Center, Potsdamer Platz 10, Floor 2, Office 427, 10785 Berlin"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "hello@domain.com",
+        "telephone": "+49 69 2266756"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.com/#website",
+      "url": "https://domain.com",
+      "name": "domain",
+      "publisher": {
+        "@id": "https://domain.com/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.com/about.html#webpage",
+      "url": "https://domain.com/about.html",
+      "name": "Über Uns - Unsere Vision &amp; Team | domain",
+      "isPartOf": {
+        "@id": "https://domain.com/#website"
+      },
+      "about": {
+        "@id": "https://domain.com/#org"
+      },
+      "inLanguage": "de",
+      "description": "Lernen Sie domain kennen - unser Team aus erfahrenen Beratern, unsere Unternehmensphilosophie und unsere Vision für die Zukunft der Unternehmensberatung."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://domain.com/about.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://domain.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About.Html",
+          "item": "https://domain.com/about.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Über Uns - Unsere Vision &amp; Team | domain</title>
@@ -12,38 +78,49 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+<link rel="stylesheet" href="./consent.css">
+<script src="./consent.js"></script>
+</head>
  <body>
-  <header class="l-header" role="banner">
-   <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom" aria-label="Hauptnavigation">
-    <div class="container">
-     <a class="navbar-brand c-logo" href="/" aria-label="BeraterPro Consulting Startseite"> 
-      <svg class="c-logo__img" width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BeraterPro Logo">
-       <rect width="40" height="40" rx="8" fill="#10b981"></rect> <path d="M15 12h10v3h-7v3h6v3h-6v4h7v3H15V12z" fill="#fff"></path> <text x="50" y="26" font-family="var(--font-heading)" font-size="18" font-weight="700" fill="#111827">BeraterPro</text>
-      </svg> 
-     </a>
-     <button class="navbar-toggler c-nav__toggle" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Navigation umschalten"><span class="navbar-toggler-icon"></span></button>
-     <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 c-nav">
-       <li class="nav-item c-nav__item"><a class="nav-link" href="/" aria-current="page">Startseite</a></li>
-       <li class="nav-item c-nav__item"><a class="nav-link" href="about.html">Über uns</a></li>
-       <li class="nav-item c-nav__item"><a class="nav-link" href="services.html">Leistungen</a></li>
-       <li class="nav-item c-nav__item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+<header class="dr-header" data-dr-variant="v2">
+  <div class="dr-header-inner">
+    <nav class="dr-nav dr-nav-left" aria-label="Primary navigation left">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li>
       </ul>
-      <a href="contact.html" class="btn btn-primary ms-lg-3">Beratung anfragen</a>
-     </div>
-    </div>
-   </nav>
-  </header>
+    </nav>
+
+    <a class="dr-logo dr-logo-center" href="./index.html" aria-label="domain">domain</a>
+
+    <nav class="dr-nav dr-nav-right" aria-label="Primary navigation right">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+      </ul>
+    </nav>
+
+    <button class="dr-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="dr-mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="dr-mobile-menu" id="dr-mobile-menu" aria-label="Mobile navigation">
+  <ul class="dr-mobile-nav-list">
+    <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+  </ul>
+</nav>
+
   <main class="l-main" role="main">
-   <nav aria-label="breadcrumb" class="l-container py-3">
+   <nav aria-label="breadcrumb" class="container py-3">
     <ol class="breadcrumb">
      <li class="breadcrumb-item"><a href="index.html">Startseite</a></li>
      <li class="breadcrumb-item active" aria-current="page">Über Uns</li>
     </ol>
    </nav>
    <section class="c-hero c-hero--about py-5" data-aos="fade-up">
-    <div class="l-container">
+    <div class="container">
      <div class="row align-items-center">
       <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
        <h1 class="c-section-title c-section-title--large mb-4">Wer wir sind: Exzellenz in der Unternehmensberatung</h1>
@@ -59,7 +136,7 @@
     </div>
    </section>
    <section class="c-section c-section--vision py-5" data-aos="fade-up">
-    <div class="l-container">
+    <div class="container">
      <div class="row justify-content-center">
       <div class="col-lg-10">
        <div class="text-center mb-5" data-aos="zoom-in">
@@ -99,7 +176,7 @@
     </div>
    </section>
    <section class="c-section c-section--values py-5 bg-light" data-aos="fade-up">
-    <div class="l-container">
+    <div class="container">
      <div class="text-center mb-5" data-aos="zoom-in">
       <h2 class="c-section-title mb-3">Unsere Werte</h2>
       <p class="lead">Die Prinzipien, die unsere Arbeit und unsere Beziehungen zu Kunden leiten.</p>
@@ -187,7 +264,7 @@
     </div>
    </section>
    <section class="c-section c-section--team py-5" data-aos="fade-up">
-    <div class="l-container">
+    <div class="container">
      <div class="text-center mb-5" data-aos="zoom-in">
       <h2 class="c-section-title mb-3">Unser Führungsteam</h2>
       <p class="lead">Erfahrene Experten mit nachgewiesener Erfolgsbilanz in strategischer Beratung.</p>
@@ -253,7 +330,7 @@
     </div>
    </section>
    <section class="c-section c-section--future py-5 bg-light" data-aos="fade-up">
-    <div class="l-container">
+    <div class="container">
      <div class="row align-items-center">
       <div class="col-lg-6" data-aos="slide-right" data-aos-delay="100">
        <div class="ratio ratio-16x9 mb-4 mb-lg-0">
@@ -276,7 +353,7 @@
     </div>
    </section>
    <section class="c-section c-section--locations py-5" data-aos="fade-up">
-    <div class="l-container">
+    <div class="container">
      <div class="text-center mb-5" data-aos="zoom-in">
       <h2 class="c-section-title mb-3">Unsere Standorte</h2>
       <p class="lead">Wir sind dort, wo unsere Kunden uns brauchen - mit Büros in den wichtigsten deutschen Wirtschaftszentren.</p>
@@ -293,13 +370,13 @@
          <h3 class="h5 mb-3">Frankfurt am Main (Hauptsitz)</h3>
          <p class="mb-2"><strong>Adresse:</strong>
           <br>
-          {address}</p>
+          Sony Center, Potsdamer Platz 10, Floor 2, Office 427, 10785 Berlin</p>
          <p class="mb-2"><strong>Telefon:</strong>
           <br>
-          {telephone}</p>
+          +49 69 2266756</p>
          <p class="mb-2"><strong>E-Mail:</strong>
           <br>
-          <a href="mailto:info@domain.com">info@domain.com</a></p>
+          <a href="mailto:hello@domain.com">hello@domain.com</a></p>
          <p class="small text-muted mt-3">Unser Hauptsitz im Herzen des deutschen Finanzzentrums bietet optimale Anbindung für nationale und internationale Kunden.</p>
         </div>
        </div>
@@ -323,7 +400,7 @@
           +49 89 87654321</p>
          <p class="mb-2"><strong>E-Mail:</strong>
           <br>
-          <a href="mailto:info@domain.com">info@domain.com</a></p>
+          <a href="mailto:hello@domain.com">hello@domain.com</a></p>
          <p class="small text-muted mt-3">Zentral gelegen für Beratungsprojekte in Süddeutschland mit Fokus auf Automobilindustrie und Hightech.</p>
         </div>
        </div>
@@ -347,7 +424,7 @@
           +49 30 98765432</p>
          <p class="mb-2"><strong>E-Mail:</strong>
           <br>
-          <a href="mailto:info@domain.com">info@domain.com</a></p>
+          <a href="mailto:hello@domain.com">hello@domain.com</a></p>
          <p class="small text-muted mt-3">Im Zentrum der Hauptstadt unterstützen wir Start-ups und etablierte Unternehmen bei digitaler Innovation.</p>
         </div>
        </div>
@@ -356,7 +433,7 @@
     </div>
    </section>
    <section class="c-section c-section--cta py-5 bg-gradient" data-aos="fade-up">
-    <div class="l-container">
+    <div class="container">
      <div class="row justify-content-center">
       <div class="col-lg-8 text-center" data-aos="zoom-in" data-aos-delay="100">
        <h2 class="c-section-title mb-4 text-white">Bereit für den nächsten Schritt?</h2>
@@ -369,69 +446,60 @@
     </div>
    </section>
   </main>
-  <footer class="l-footer bg-dark text-light py-5" role="contentinfo">
-   <div class="container">
-    <div class="row g-4">
-     <div class="col-lg-4">
-      <h3 class="h5 mb-3">BeraterPro Consulting</h3>
-      <p class="mb-3">Ihr Partner für strategische Unternehmensberatung und nachhaltiges Wachstum.</p>
-      <p class="mb-1"><strong>Adresse:</strong>
-       <br>
-       {address}</p>
-      <p class="mb-1"><strong>Telefon:</strong>
-       <br>
-       <a href="tel:{telephone}" class="text-light text-decoration-none">{telephone}</a></p>
-      <p class="mb-0"><strong>E-Mail:</strong>
-       <br>
-       <a href="mailto:info@domain.com" class="text-light text-decoration-none">info@domain.com</a></p>
-     </div>
-     <div class="col-lg-2 col-md-4">
-      <h3 class="h6 mb-3">Navigation</h3>
-      <ul class="list-unstyled">
-       <li class="mb-2"><a href="/" class="text-light text-decoration-none">Startseite</a></li>
-       <li class="mb-2"><a href="about.html" class="text-light text-decoration-none">Über uns</a></li>
-       <li class="mb-2"><a href="services.html" class="text-light text-decoration-none">Leistungen</a></li>
-       <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none">Kontakt</a></li>
-      </ul>
-     </div>
-     <div class="col-lg-3 col-md-4">
-      <h3 class="h6 mb-3">Rechtliches</h3>
-      <ul class="list-unstyled">
-       <li class="mb-2"><a href="privacy.html" class="text-light text-decoration-none">Datenschutzerklärung</a></li>
-       <li class="mb-2"><a href="terms_and_conditions.html" class="text-light text-decoration-none">Allgemeine Geschäftsbedingungen</a></li>
-       <li class="mb-2"><a href="terms_of_services.html" class="text-light text-decoration-none">Nutzungsbedingungen</a></li>
-       <li class="mb-2"><a href="cookie_policy.html" class="text-light text-decoration-none">Cookie-Richtlinie</a></li>
-       <li class="mb-2"><a href="gdpr-rights.html" class="text-light text-decoration-none">DSGVO-Rechte</a></li>
-       <li class="mb-2"><a href="impressum.html" class="text-light text-decoration-none">Impressum</a></li>
-      </ul>
-     </div>
-     <div class="col-lg-3 col-md-4">
-      <h3 class="h6 mb-3">Folgen Sie uns</h3>
-      <div class="d-flex gap-3">
-       <a href="#" class="text-light" aria-label="LinkedIn"> 
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" role="img">
-         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-        </svg> 
-       </a> <a href="#" class="text-light" aria-label="Twitter"> 
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" role="img">
-         <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-        </svg> 
-       </a> <a href="#" class="text-light" aria-label="Facebook"> 
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" role="img">
-         <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-        </svg> 
-       </a>
+  <footer class="dr-footer" aria-label="Seitenfußer">
+  <div class="dr-footer-inner">
+    <div class="dr-footer-top">
+      <div class="dr-footer-brand-contact">
+        <div class="dr-footer-brand">
+          <span class="dr-footer-logo-text" aria-label="domain">domain</span>
+        </div>
+        <div class="dr-footer-contact" aria-label="Kontaktinformationen">
+          <p class="dr-footer-contact-item"><span class="dr-footer-contact-label">Adresse:</span> <span class="dr-footer-contact-value">Sony Center, Potsdamer Platz 10, Floor 2, Office 427, 10785 Berlin</span></p>
+          <p class="dr-footer-contact-item"><span class="dr-footer-contact-label">Telefon:</span> <a class="dr-footer-contact-link" href="tel:+49 69 2266756">+49 69 2266756</a></p>
+          <p class="dr-footer-contact-item"><span class="dr-footer-contact-label">E-Mail:</span> <a class="dr-footer-contact-link" href="mailto:hello@domain.com">hello@domain.com</a></p>
+        </div>
       </div>
-     </div>
+      <div class="dr-footer-nav-wrapper">
+        <nav class="dr-footer-nav" aria-label="Hauptnavigation im Footer">
+          <h2 class="dr-footer-heading">Navigation</h2>
+          <ul class="dr-footer-nav-list">
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./index.html">Home</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./about.html">About</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./contact.html">Contact</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./services.html">Services</a></li>
+          </ul>
+        </nav>
+        <nav class="dr-footer-legal" aria-label="Rechtliche Informationen">
+          <h2 class="dr-footer-heading">Rechtliches</h2>
+          <ul class="dr-footer-legal-list">
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./privacy.html">Privacy Policy</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_of_services.html">Terms of Service</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_and_conditions.html">Terms and Conditions</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./cookie_policy.html">Cookie Policy</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./gdpr-rights.html">GDPR Rights</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./impressum.html">Impressum</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <hr class="my-4 bg-secondary">
-    <div class="row">
-     <div class="col-12 text-center">
-      <p class="mb-0 small">© 2025 BeraterPro Consulting. Alle Rechte vorbehalten.</p>
-     </div>
+    <div class="dr-footer-bottom">
+      <p class="dr-footer-disclaimer">Die Inhalte auf dieser Website werden von domain bereitgestellt. Alle Informationen auf domain.com dienen ausschließlich allgemeinen Informationszwecken und stellen keine rechtliche oder finanzielle Beratung dar.</p>
+      <p class="dr-footer-meta"><span class="dr-year"></span> © domain. All rights reserved.</p>
     </div>
-   </div>
-  </footer>
-  <script src="script.js" defer=""></script>
+  </div>
+</footer>
+  
  
+  
+  
+
+<script src="script.js" defer=""></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
 </body></html>

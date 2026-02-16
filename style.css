@@ -1262,7 +1262,6 @@ blockquote {
   border: 2px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-xl);
-  height: 100%;
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
